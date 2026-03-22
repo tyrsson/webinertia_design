@@ -30,6 +30,16 @@
         </ul>
     </nav>
 
+    <!-- Mobile Navigation Toggle (visible ≤1024px) -->
+    <button class="mobile-nav-toggle"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileNav"
+            aria-controls="mobileNav"
+            aria-label="Open navigation">
+        <span></span>
+    </button>
+
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Split Screen -->
@@ -163,6 +173,41 @@
             <p>© 2026 <span class="footer-brand">Webinertia</span> <span class="accent-dot"></span> Shaping Digital Futures</p>
         </div>
     </footer>
+
+    <!-- Mobile Navigation Offcanvas Drawer -->
+    <div class="offcanvas offcanvas-start"
+         tabindex="-1"
+         id="mobileNav"
+         aria-labelledby="mobileNavLabel">
+        <div class="offcanvas-header">
+            <span class="offcanvas-title" id="mobileNavLabel">Webinertia</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="index.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">
+                <span class="nav-icon">🏠</span><span class="nav-label">Home</span>
+            </a>
+            <a href="services.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">
+                <span class="nav-icon">⚡</span><span class="nav-label">Services</span>
+            </a>
+            <a href="about.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">
+                <span class="nav-icon">💡</span><span class="nav-label">About</span>
+            </a>
+            <a href="portfolio.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">
+                <span class="nav-icon">🎨</span><span class="nav-label">Portfolio</span>
+            </a>
+            <a href="contact.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">
+                <span class="nav-icon">📧</span><span class="nav-label">Contact</span>
+            </a>
+            <a href="components.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">
+                <span class="nav-icon">🧩</span><span class="nav-label">Components</span>
+            </a>
+            <div class="mobile-nav-divider"></div>
+            <div class="mobile-nav-cta">
+                <a href="contact.html" class="btn-primary" data-bs-dismiss="offcanvas">Start a Project</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap 5.3 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
