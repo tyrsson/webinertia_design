@@ -294,6 +294,55 @@ Never use Bootstrap colour utilities (`bg-primary`, `text-success`, etc.) — th
 
 ---
 
+## Mobile Navigation
+
+At `≤1024px` the desktop side rail collapses to `width: 0`. A hamburger button and offcanvas drawer replace it.
+
+**Hamburger button** — add immediately after the closing `</nav>` of `.side-nav`, before `<!-- Main Content -->`:
+
+```html
+<!-- Mobile Navigation Toggle (visible ≤1024px) -->
+<button class="mobile-nav-toggle"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileNav"
+        aria-controls="mobileNav"
+        aria-label="Open navigation">
+    <span></span>
+</button>
+```
+
+**Offcanvas drawer** — add after `</footer>` and before the Bootstrap JS `<script>` tag:
+
+```html
+<!-- Mobile Navigation Offcanvas Drawer -->
+<div class="offcanvas offcanvas-start"
+     tabindex="-1"
+     id="mobileNav"
+     aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+        <span class="offcanvas-title" id="mobileNavLabel">Webinertia</span>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <a href="index.html"      class="mobile-nav-link" data-bs-dismiss="offcanvas"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a>
+        <a href="services.html"   class="mobile-nav-link" data-bs-dismiss="offcanvas"><span class="nav-icon">⚡</span><span class="nav-label">Services</span></a>
+        <a href="about.html"      class="mobile-nav-link" data-bs-dismiss="offcanvas"><span class="nav-icon">💡</span><span class="nav-label">About</span></a>
+        <a href="portfolio.html"  class="mobile-nav-link" data-bs-dismiss="offcanvas"><span class="nav-icon">🎨</span><span class="nav-label">Portfolio</span></a>
+        <a href="contact.html"    class="mobile-nav-link" data-bs-dismiss="offcanvas"><span class="nav-icon">📧</span><span class="nav-label">Contact</span></a>
+        <a href="components.html" class="mobile-nav-link" data-bs-dismiss="offcanvas"><span class="nav-icon">🧩</span><span class="nav-label">Components</span></a>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-nav-cta">
+            <a href="contact.html" class="btn-primary" data-bs-dismiss="offcanvas">Start a Project</a>
+        </div>
+    </div>
+</div>
+```
+
+CSS classes: `.mobile-nav-toggle`, `#mobileNav.offcanvas`, `.mobile-nav-link`, `.mobile-nav-divider`, `.mobile-nav-cta` — all defined in `style.css`. Do not add inline styles to these elements.
+
+---
+
 ## CSS File Notes
 
 - Single stylesheet: `assets/css/style.css`

@@ -1416,3 +1416,159 @@ footer {
     max-width: 1400px;
     margin: 0 auto;
 }
+
+/* =====================================================
+   MOBILE NAVIGATION
+   Hamburger trigger + Offcanvas drawer.
+   Visible at ≤1024px only — desktop uses .side-nav.
+   ===================================================== */
+
+/* Fixed hamburger button — top-right, hidden on desktop */
+.mobile-nav-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1050;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 15, 30, 0.85);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+}
+
+.mobile-nav-toggle:hover {
+    background: rgba(139, 92, 246, 0.25);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Three-bar hamburger icon */
+.mobile-nav-toggle span,
+.mobile-nav-toggle span::before,
+.mobile-nav-toggle span::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-nav-toggle span::before,
+.mobile-nav-toggle span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.mobile-nav-toggle span::before { top: -7px; }
+.mobile-nav-toggle span::after  { top:  7px; }
+
+/* Offcanvas drawer — glassmorphic dark theme */
+#mobileNav.offcanvas {
+    background: rgba(10, 10, 25, 0.97);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    border-right: 1px solid rgba(139, 92, 246, 0.3);
+    width: 280px;
+    font-family: 'Space Grotesk', Inter, system-ui, sans-serif;
+}
+
+#mobileNav .offcanvas-header {
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+    padding: 1.5rem 1.5rem 1.25rem;
+}
+
+#mobileNav .offcanvas-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#mobileNav .btn-close {
+    filter: invert(1) brightness(0.7);
+    opacity: 0.7;
+}
+
+#mobileNav .btn-close:hover {
+    opacity: 1;
+}
+
+#mobileNav .offcanvas-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Individual nav links inside the drawer */
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.1rem;
+    border-radius: 12px;
+    background: rgba(139, 92, 246, 0.08);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+    background: var(--gradient-1);
+    border-color: transparent;
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+.mobile-nav-link .nav-icon {
+    font-size: 1.2rem;
+    width: 28px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.mobile-nav-link .nav-label {
+    flex: 1;
+}
+
+/* Divider above the CTA inside the drawer */
+.mobile-nav-divider {
+    height: 1px;
+    background: rgba(139, 92, 246, 0.2);
+    margin: 0.75rem 0;
+}
+
+/* CTA block pinned to the bottom of the drawer */
+.mobile-nav-cta {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.mobile-nav-cta a.btn-primary {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+/* Show hamburger at ≤1024px (same breakpoint as side-nav collapse) */
+@media (max-width: 1024px) {
+    .mobile-nav-toggle {
+        display: flex;
+    }
+}
