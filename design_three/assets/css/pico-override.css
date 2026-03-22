@@ -1,0 +1,16 @@
+/* Pico CSS Overrides for Cutting-Edge Design */
+:root {
+    --pico-font-family-sans-serif: 'Space Grotesk', Inter, system-ui, sans-serif;
+    --pico-font-size: 100%;
+    --pico-line-height: 1.6;
+    --pico-border-radius: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    --pico-font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+article {
+    border: none;
+}

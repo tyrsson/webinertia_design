@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Webinertia</title>
+    <meta name="description" content="Get in touch with Webinertia for your web development needs.">
+
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/pico-override.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="container-fluid">
+        <ul>
+            <li><strong class="nav-logo"><a href="index.html" style="color: inherit;">Webinertia</a></strong></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" role="button">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <main id="app-main">
+        <!-- Contact Section -->
+        <section class="container page-content">
+            <div class="section-header">
+                <h1 class="text-gradient section-title">Get In Touch</h1>
+                <div class="accent-line accent-line-centered"></div>
+                <p class="section-description">
+                    Ready to start your project? Let's discuss how we can help.
+                </p>
+            </div>
+
+            <div class="glass-card about-card contact-form-grid">
+                <form>
+                    <div class="grid">
+                        <label>
+                            First Name
+                            <input type="text" name="firstname" placeholder="John" required>
+                        </label>
+                        <label>
+                            Last Name
+                            <input type="text" name="lastname" placeholder="Doe" required>
+                        </label>
+                    </div>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="john.doe@example.com" required>
+                    </label>
+
+                    <label>
+                        Company
+                        <input type="text" name="company" placeholder="Your Company">
+                    </label>
+
+                    <label>
+                        Project Type
+                        <select name="projecttype" required>
+                            <option value="">Select a service...</option>
+                            <option value="web-app">Web Application</option>
+                            <option value="ecommerce">E-Commerce</option>
+                            <option value="api">API Development</option>
+                            <option value="redesign">Website Redesign</option>
+                            <option value="optimization">Performance Optimization</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Budget Range
+                        <select name="budget">
+                            <option value="">Select budget range...</option>
+                            <option value="5k-10k">$5,000 - $10,000</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-50k">$25,000 - $50,000</option>
+                            <option value="50k+">$50,000+</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Project Details
+                        <textarea name="message" placeholder="Tell us about your project..." rows="6" required></textarea>
+                    </label>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section class="container section-top-margin">
+            <div class="grid">
+                <div class="glass-card">
+                    <div class="feature-icon">📧</div>
+                    <h3 class="feature-card-title">Email Us</h3>
+                    <p class="feature-card-description">
+                        <a href="mailto:hello@webinertia.com">hello@webinertia.com</a>
+                    </p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="feature-icon">📞</div>
+                    <h3 class="feature-card-title">Call Us</h3>
+                    <p class="feature-card-description">
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    </p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-card-title">Live Chat</h3>
+                    <p class="feature-card-description">
+                        Available Monday - Friday<br>9 AM - 6 PM EST
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container-fluid">
+        <p>
+            © 2026 <span class="footer-brand">Webinertia</span>. Building the future, one line of code at a time.
+        </p>
+    </footer>
+</body>
+</html>
